@@ -3,36 +3,23 @@
     <title>Basic Scene with Environment - A-Frame</title>
     <meta name="description" content="Basic Scene with Environment - A-Frame">
     <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-    <script src="https://unpkg.com/fdist/aframe-environment-component.min.js"></script>
   </head>
   <body>
-    <!-- Try changing the preset to one of default, contact, egypt, checkerboard, forest, goaland, yavapai, goldmine, 
-         threetowers, poison, arches, tron, japan, dream, volcano, starry, osiris. -->
-    <!-- See more environment options: https://github.com/feiss/aframe-environment-component#parameters -->
-    <a-scene environment="preset: forest">
+    <a-scene>
       <a-assets>
-        <img id="boxTexture" src="http://www.nwicon.com/hex-mountain-near-summit-snow-grove-360.htm">
-         <a-asset-item id="tree-obj" src="tinker.obj"></a-asset-item> 
-     <a-asset-item id="tree-mtl" src="obj.mtl"></a-asset-item> 
+         <a-asset-item id="cell-obj" src="cell.obj"></a-asset-item> 
+         <a-asset-item id="cell-mtl" src="cell.mtl"></a-asset-item> 
       </a-assets>
-    
-  
-      <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
+    <a-entity obj-model="obj: #cell-obj; mtl: #cell-mtl"></a-entity>
 
 
       <a-box position="0 2 -5" rotation="0 45 45" scale="2 2 2" src="#boxTexture">
         <a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite"
           to="0 2.2 -5"></a-animation>
-        <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
-        <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.3 2.3 2.3"></a-animation>
-        <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
-      </a-box>
+      
 
-      <a-text value="Hi, Zazi" color="#76D7C4" position="-0.9 0.2 -3" scale="1.5 1.5 1.5"></a-text>
+      <a-text value="Lauren's Cell" color="#76D7C4" position="-0.9 0.2 -3" scale="1.5 1.5 1.5"></a-text>
 
-      <a-sky id="boxTexture" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7HDnadDyIFGgbt_mdXyr5Wb5pvtc-O1NXMcXJ-VT39PSu8TBG:https://t4.ftcdn.net/jpg/00/69/81/47/240_F_69814798_TutTakE1O2fM9PMYnYIuR8B0zc6AA7JT.jpg"></a-sky>
-
-      <!-- Textured plane parallel to ground. -->
       <a-plane color="76D7C4" height="100" width="100" rotation="-90 0 0"></a-plane>
         </a-scene>
 
