@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Basic Scene with Environment - A-Frame</title>
+    <meta name="description" content="Basic Scene with Environment - A-Frame">
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+         <a-asset-item id="cell-obj" src="cell.obj"></a-asset-item> 
+         <a-asset-item id="cell-mtl" src="cell.mtl"></a-asset-item> 
+      </a-assets>
+    <a-entity obj-model="obj: #cell-obj; mtl: #cell-mtl"></a-entity>
+
+
+      <a-box position="0 2 -5" rotation="0 45 45" scale="2 2 2" src="#boxTexture">
+        <a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite"
+          to="0 2.2 -5"></a-animation>
+      
+
+      <a-text value="Lauren's Cell" color="#76D7C4" position="-0.9 0.2 -3" scale="1.5 1.5 1.5"></a-text>
+
+      <a-plane color="76D7C4" height="100" width="100" rotation="-90 0 0"></a-plane>
+        </a-scene>
+
+      <a-camera>
+        <a-cursor color="#FAFAFA"></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
